@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b_extra_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/extra_point"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/middle"
+            app:layout_constraintTop_toBottomOf="@+id/b_award_points" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/team_b_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/team_b"
+            android:textSize="@dimen/team_label_size"
+            app:layout_constraintBottom_toTopOf="@+id/b_score"
+            app:layout_constraintEnd_toEndOf="@+id/b_score"
+            app:layout_constraintStart_toStartOf="@+id/b_score"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/b_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/_0"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="@dimen/score_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/b_touchdown"
+            app:layout_constraintEnd_toEndOf="@+id/b_touchdown"
+            app:layout_constraintStart_toStartOf="@+id/b_touchdown"
+            app:layout_constraintTop_toBottomOf="@+id/team_b_label" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b_touchdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/touchdown"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/b_field_goal"
+            app:layout_constraintEnd_toEndOf="@+id/b_field_goal"
+            app:layout_constraintStart_toStartOf="@+id/b_field_goal"
+            app:layout_constraintTop_toBottomOf="@+id/b_score" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b_field_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/field_goal"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/b_award_points"
+            app:layout_constraintEnd_toEndOf="@+id/b_award_points"
+            app:layout_constraintStart_toStartOf="@+id/b_award_points"
+            app:layout_constraintTop_toBottomOf="@+id/b_touchdown" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/b_award_points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/award_points"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/b_extra_point"
+            app:layout_constraintEnd_toEndOf="@+id/b_extra_point"
+            app:layout_constraintStart_toStartOf="@+id/b_extra_point"
+            app:layout_constraintTop_toBottomOf="@+id/b_field_goal" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/team_a_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/team_a"
+            android:textSize="@dimen/team_label_size"
+            app:layout_constraintBottom_toTopOf="@+id/a_score"
+            app:layout_constraintEnd_toEndOf="@+id/a_score"
+            app:layout_constraintStart_toStartOf="@+id/a_score"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/a_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/_0"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="@dimen/score_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/a_touchdown"
+            app:layout_constraintEnd_toEndOf="@+id/a_touchdown"
+            app:layout_constraintStart_toStartOf="@+id/a_touchdown"
+            app:layout_constraintTop_toBottomOf="@+id/team_a_label" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a_touchdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/touchdown"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/a_field_goal"
+            app:layout_constraintEnd_toEndOf="@+id/a_field_goal"
+            app:layout_constraintStart_toStartOf="@+id/a_field_goal"
+            app:layout_constraintTop_toBottomOf="@+id/a_score" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a_field_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/field_goal"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/a_award_points"
+            app:layout_constraintEnd_toEndOf="@+id/a_award_points"
+            app:layout_constraintStart_toStartOf="@+id/a_award_points"
+            app:layout_constraintTop_toBottomOf="@+id/a_touchdown" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a_award_points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/award_points"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/a_extra_point"
+            app:layout_constraintEnd_toEndOf="@+id/a_extra_point"
+            app:layout_constraintStart_toStartOf="@+id/a_extra_point"
+            app:layout_constraintTop_toBottomOf="@+id/a_field_goal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a_extra_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/extra_point"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/a_award_points" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/reset"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b_extra_point"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
